@@ -1,3 +1,57 @@
+
+/* Navbar styles */
+#header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header ul {
+    display: flex;
+    list-style: none;
+}
+
+#header ul li {
+    margin: 0 10px;
+}
+
+#header ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#header ul li a:hover {
+    color: var(--hover-color);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #20b2aa;
+        width: 100%;
+        text-align: center;
+    }
+
+    #header nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +63,7 @@ body {
     background-color: #02012bf8;
     color: #fff;
 }
-
+/*
 #header {
     width: 100%;
     height: 100vh;
@@ -17,7 +71,8 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative; /* Ensure positioning context for the circle */
-}
+
+
 
 .background-circle {
     width: 200px;
@@ -64,7 +119,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background: #fff;
-    color: #000;
+    color: #f40d0d;
 }
 
 .content {
@@ -82,7 +137,7 @@ nav ul li a:hover {
 }
 
 .header-text p {
-    color: #fff;
+    color: #db0c0c;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
@@ -100,11 +155,12 @@ nav ul li a:hover {
 }
 
 .background-circle {
-    width: 200px;
-    height: 200px;
-    background: url("images/m.jpg") no-repeat center center;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    background: url("images/me3.jpg") no-repeat center center;
     background-size: cover;
-    border-radius: 50%;
+   border-radius: 50%;
     position: absolute;
     top: 10%;
     left: 10%;
@@ -116,6 +172,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 40px 100px;
+    background: rgba(5, 12, 80, 0.936); /* Transparent background */
+
 }
 
 nav .logo {
@@ -154,6 +212,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    font-size: 15px;
 }
 
 .header-text {
@@ -171,7 +230,7 @@ nav ul li a:hover {
 }
 
 .header-text h1 {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 70px;
 }
 
@@ -181,23 +240,38 @@ nav ul li a:hover {
 
 /* --------------ABOUT ME------------------ */
 #about {
-    padding: 80px 0 ;
+    padding: 80px 0;
     color: #ababab;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(50px); /* Move down initially */
+    transition: opacity 1s, transform 1s; /* Smooth transition */
 }
-.row{
+
+#about.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-col-1{
+
+.about-col-1 {
     flex-basis: 35%;
 }
-.about-col-1 img{
-    padding-left: 15%;  
+
+.about-col-1 img {
     width: 70%;
-    border-radius: 50px;
-    
+    border-radius: 50%;
+    transition: transform 0.5s; /* Smooth scale transition */
 }
+
+.about-col-1 img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
 .about-col-2{
     flex-basis: 60%;
 }
@@ -285,7 +359,7 @@ nav ul li a:hover {
     background: #f50914;
     transform: translateY(-10px);
 }
-/*--------certification------------*/
+/*--------certification------------
 #certificate{
     padding: 30px 0;
 }
@@ -306,12 +380,12 @@ nav ul li a:hover {
     width: 60%;
     border-radius: 10px;
     display: block;
-    transition: transform 0.5s; /* Ensure smooth transition for scaling */
+    transition: transform 0.5s; /* Ensure smooth transition for scaling 
 }
 
 .layer {
     width: 63%;
-    height: 0; /* Start with height 0 for hidden effect */
+    height: 0; /* Start with height 0 for hidden effect *
     background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
     border-radius: 10px;
     position: absolute;
@@ -334,13 +408,13 @@ nav ul li a:hover {
 }
 
 .certificate:hover img {
-    transform: scale(1.1); /* Scale up the image on hover */
+    transform: scale(1.1); /* Scale up the image on hover 
 }
 
 .certificate:hover .layer {
-    height: 100%; /* Expand the layer to full height on hover */
+    height: 100%; /* Expand the layer to full height on hover 
 }
-
+*/
 /*------------------------contact--------------------*/
 .contact-left{
     flex-basis:35%;
@@ -373,13 +447,22 @@ nav ul li a:hover {
 }
 .btn.btn2{
     display: inline-block;
-    background: #e00c68;
+    background: #e11111f8;
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+    outline: none;
+    border-radius:30px;
+    
 }
+
 .contact-right form{
+
+        border: 1px solid #041038f7; /* Add a border with a light gray color */
+        background-color: #041038f7; /* Add a light blue background color */
+        padding: 20px; /* Add some padding inside the form */
+        margin-top: 20px; 
     width: 100%;
 
 }
@@ -405,12 +488,15 @@ form .btn2{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: #101011;
     font-weight: 300;
     margin-top: 20px;
 }
 
 /*---------------------------css for small responsive scree -----------*/
+nav .fas{
+display: none;
+}
 @media only screen and (max-width: 600px){
     .header-text{
         margin-top: 100%;
@@ -418,7 +504,31 @@ form .btn2{
     }
     .header-text h1{
         font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top:0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
 
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
  
 }
