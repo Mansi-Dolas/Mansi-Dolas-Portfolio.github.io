@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar</title>
     <link rel="stylesheet" href="style.css">
-    <script src= "https://smtpjs.com/v3/smtp.js"></script> 
+    
     <script src="script.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -135,44 +135,6 @@
 
 </div>
 
-<!--------------------certificates-----------
-<div id="certificate">
-    <div class="container">
-        <h1 class="sub-title">certificates</h1>
-        <div class="certificate-list">
-            <div class="certificate">
-                <img src="images/certificate.jpg">
-                <div class="layer">
-                    <h3>Web Development Intern</h3>
-                    <p>Web Development Intern at INTRAINZ<br>Contributed to various web development projects, focusing on 
-             front-end development.Gained hands-on experience in creating responsive and interactive web pages.</p>
-                </div>
-            </div>
-            <div class="certificate">
-                <img src="images/python certificate.jpg">
-                <div class="layer">
-                    <h3>Python Course </h3>
-                    <p>Successfully completed an intensive Python course at GUVI Platform. Acquired comprehensive knowledge of 
-                        Python programming, including fundamental concepts, data structures, and advanced topics such as object-oriented programming and web development.
-                         Developed practical skills through hands-on projects and real-world applications.</p>
-                </div>
-            </div>
-            <div class="certificate">
-                <img src="images/Angular.jpg">
-                <div class="layer">
-                    <h3>Angular Framework </h3>
-                    <p>Successfully completed an in-depth Angular Framework course at Great Learning Platform.
-                     Gained a thorough understanding of Angular concepts, including component-based architecture, data binding, services, and dependency injection. 
-                 Enhanced skills in building dynamic, responsive, and efficient web applications through practical projects and hands-on exercises.</p>
-                </div>
-            </div>
-               
-        </div>
-        
-    </div>
-
-</div>-->
-
 
 <!------------------contact---------------------->
 <div id="contact">
@@ -193,9 +155,12 @@
             <a href="images/Resume_Mansi_Dolas.pdf" download class="btn btn2">Download Cv</a>
             </div>
             <div class="contact-right">
-                <form onsubmit="sendEmail(); reset(); return false;">
+                <form  action="https://api.web3forms.com/submit" method="POST">
+                    
                     
                     <h3>Get in touch</h3>
+                    <input type="hidden" name="access_key" value="03d37656-e74a-4e0f-b3df-7534f7bb3290">
+
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -213,34 +178,7 @@
 </div>
 
 <!----------------------------------------js--------------------------->
-<script>
 
-function sendEmail() {
-    console.log("Sending email...");
-
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "dolasmona515197@gmail.com",
-        Password : "maharaj@shivaji",
-        To : 'mansidolas9@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "Contact Form",
-        Body : "Name: " + document.getElementById("name").value
-               + "<br> Email: " + document.getElementById("email").value 
-               + "<br> Message: " + document.getElementById("message").value 
-    }).then(
-      message => {
-          console.log("Email sent successfully:", message);
-          alert("Message sent successfully");
-      },
-      error => {
-          console.error("Error sending email:", error);
-          alert("Failed to send message. Please try again later.");
-      }
-    );
-}
-
-</script>
 </body>
 
 </html>
