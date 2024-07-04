@@ -3,108 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mansi's Portfolio</title>
     
-    <script src="script.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/38abf89e48.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   
+    <!-- HEADER SECTION -->
     <nav>
-        <div class="logo">Mansi </div>
-        <div class="menu-icon" id="menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul id="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#certificate">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
-            
+        <div class="logo">mansi</div>
+        <ul id="sidemenu">
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about me">about me</a></li>
+            <li><a href="#project">project</a></li>
+            <li><a href="#internship">internship</a></li>
+            <li><a href="#Contact Me">contact me</a></li>
 
         </ul>
-
-
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
+    <!------------HOME SECTION--->
+    <div class="container">
+        <div class="right-text">
+            <h2>frontend Developer | JAVA Developer</h2><br>
 
-    <div class="content">
-        <div class="header-text">
-            <p>frontend Developer|JAVA Developer</p>
             <h1>Hi, I'm <span>Mansi</span><br> Dolas From India</h1>
         </div>
 
-        <div id="about ">
-            <div class="contener">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="images/me3.jpg">
-                    </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title"> About me </h1>
-                        <p>I am a passionate and dedicated computer science student with a strong foundation in Core Java. I have hands-on experience developing Java applications, understanding object-oriented programming principles. My coursework and personal projects have equipped me with the skills to write clean, efficient, and maintainable code. I am eager to apply my knowledge in a real-world setting and contribute to dynamic software development teams. I am enthusiastic about learning new technologies and
-                            am committed to continuous improvement and professional growth.</p>
-                    
-                         <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('education')" >Education</p>
-                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('internship')">internship</p>
-                        <p class="tab-links" onclick="opentab('hobbies')">hobbies</p>
+    <div class="left-text">
+        <img src="images/me3.jpg" alt="">
+    </div>
+    </div>
+<!---------------------------------------->
+<div id="about ">
+        <div class="row">
+              <div class="about-col-2">
+                <h1 class="sub-title"> About me </h1>
+                <p>I am a passionate and dedicated computer science student with a strong foundation in Core Java. I have hands-on experience developing Java applications, understanding object-oriented programming principles. My coursework and personal projects have equipped me with the skills to write clean, efficient, and maintainable code. I am eager to apply my knowledge in a real-world setting and contribute to dynamic software development teams. I am enthusiastic about learning new technologies and
+                    am committed to continuous improvement and professional growth.</p>
+            
+                 <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('education')" >Education</p>
+                <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('hobbies')">hobbies</p>
 
-                         </div>
-     <!-------------------------EDUCATION-------->
-                        <div class="tab-contains active-tab" id="education">
-                            <ul>
-                                 <li><span> SSC 2019</span><br>School Name : Hindustan Antiboitics School <br> Percentage : 75% </li>
-                                <li><span> HSC 2021 </span><br>College Name : Dr. D .Y. Patil college <br> Percentage : 78%</li>
-                                <li><span> Bachelor's of Computer Application 2024 </span><br>College Name : Dr. D .Y. Patil college <br> CGPA : 8.58</li>    
-                            </ul>
-                        </div>
+                 </div>
+<!-------------------------EDUCATION-------->
+                <div class="tab-contains active-tab" id="education">
+                    <ol>
+                         <li><span> SSC 2019</span><br>School Name : Hindustan Antiboitics School <br> Percentage : 75% </li>
+                        <li><span> HSC 2021 </span><br>College Name : Dr. D .Y. Patil college <br> Percentage : 78%</li>
+                        <li><span> Bachelor's of Computer Application 2024 </span><br>College Name : Dr. D .Y. Patil college <br> CGPA : 8.58</li>    
+                    </ol>
+                </div>
 <!------------------------------------- skills --------------------------------->
-                        <div class="tab-contains" id="skills">
-                            <ul>
-                                 <li><span>Core Java</span><br>OOPs , Exception Handling , Collection Framework , Array</li>
-                                <li><span>Web Devlopment</span><br>Html , CSS and JavaScript</li>
-                                <li><span>DataBase </span><br> SQL </li>    
-                                <li><span>Operating System</span><br>Windows , Linux</li>
-                            </ul>
-                        </div>
+                <div class="tab-contains" id="skills">
+                    <ol>
+                         <li><span>Core Java</span><br>OOPs , Exception Handling , Collection Framework , Array</li>
+                        <li><span>Web Devlopment</span><br>Html , CSS and JavaScript</li>
+                        <li><span>DataBase </span><br> SQL </li>    
+                        <li><span>Operating System</span><br>Windows , Linux</li>
+                    </ol>
+                </div>
 
 <!---------------------------------------hobbies-------------------->
-                        <div class="tab-contains" id="hobbies">
-                            <ul>
-                                 <li><span>Reading Books</span><br></li>
-                                 <li><span>Travelling</span><br></li>
-                                 <li><span>Exploring new things</span><br></li>
-                            </ul>
-                        </div>
+                <div class="tab-contains" id="hobbies">
+                    <ol>
+                         <li><span>Reading Books</span><br>I enjoy immersing myself in different stories and expanding my knowledge through books.</li>
+                         <li><span>Travelling</span><br> I love exploring new places and experiencing diverse cultures.</li>
+                         <li><span>Exploring new things</span><br>I'm always curious and eager to try new activities and learn new skills.</li>
+                    </ol>
+                </div>
+                <script src="script.js" defer></script>
+<script>
+                    
+// Tabbed Content
+function opentab(tabname) {
+    let tablinks = document.getElementsByClassName('tab-links');
+    let tabcontents = document.getElementsByClassName('tab-contains');
+    for (tablink of tablinks) {
+        tablink.classList.remove('active-link');
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove('active-tab');
+    }
+    event.currentTarget.classList.add('active-link');
+    document.getElementById(tabname).classList.add('active-tab');
+}
 
-<!---------------Experience--------------------------------------------->
-<div class="tab-contains" id="internship">
-    <div class="certificate">
-        
- <ul>
-         <li><span>Internship in INTRAINZ company</span><br></li>
+</script>
 
-         <p>Web Development Intern at INTRAINZ<br>Contributed to various web development projects, focusing on 
-            front-end development.Gained hands-on experience in creating responsive and interactive web pages.
-         </p>
-         <a href="#">learn more</a>
-
-         
-
-    </ul>
+</div>
+</div>
 </div>
 
-</div>
-</div>
-</div>
+<!-------------->
+
 <!--------------PROJECTS ------------->
-
 <div id="project">
-    <div class="container">
         <h1 class="sub-title">My Projects</h1>
         <div class="project-list">
             <div>
@@ -122,8 +119,8 @@
                 Technologies Used: HTML, CSS, JavaScript</p>
                 <a href="#">learn more</a>
            </div> 
-         <div>
-            
+        <div>
+            <i class="fa-solid fa-code"></i>
             <h2>Mellinium Kinder Garden</h2>
             <p>Designed and implemented a web application for a kindergarten management system. Key features include student enrollment, class scheduling, and a secure parent portal where parents can view their child's information and progress.
                 Technologies Used: Java, JSP, Servlets, MySQL</p>
@@ -135,10 +132,35 @@
 
 </div>
 
+<!---------------Experience--------------------------------------------->
+<div id="internship">
+    <h1 class="internship-title">Internship</h1>
+    <div class="internship-content">
+        <div class="right-content">
+            <img src="images/certificate.jpg">
+        </div>
+        <div class="left-content">
+        <p><span><u>Internship in INTRAINZ company</u></span><br>
+        Contributed to various web development projects, focusing on 
+        front-end development.Gained hands-on experience in creating responsive and interactive web pages.
+         <br>"As a Web Development Intern at INTRAINZ, I had the opportunity to contribute to a variety of web development projects, primarily focusing on front-end development tasks. 
+         During my tenure, I gained valuable hands-on experience in designing and implementing responsive and interactive web pages. 
+         This involved utilizing HTML, CSS, and JavaScript to enhance user interface functionality and optimize user experience.
+          This internship provided me with a solid foundation in web development principles and practical skills that are essential for creating modern, user-friendly websites."
+        </p>
+        </div>
+    </div>
+        
+</div>
 
-<!------------------contact---------------------->
+</div>
+</div>
+</div>
+</div
+
+<!------------------contact--------------------->
 <div id="contact">
-    <div class="container">
+    <div class="container2">
           <div class="row" >
             <div class="contact-left">
             <h2 class="sub-title">Contact Me</h2>
@@ -147,8 +169,10 @@
             <p><i class="fa-solid fa-square-phone"></i>
                 7058969305</p><br>
             <div class="social-icons">
-                <a href="linkedin.com/in/mansi-dolas-bb10b4288"><i class="fa-brands fa-linkedin"></i>
+<a href="https://www.linkedin.com/in/mansi-dolas-bb10b4288/"><i class="fa-brands fa-linkedin"></i>
 </a>
+        <a href="https://github.com/Mansi-Dolas"><i class="fa-brands fa-github"></i>
+        </a>
             </div>
             <br>
 
